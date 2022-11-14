@@ -8,10 +8,13 @@ const postRouter = require("./routes/post");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/learnit_dev", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-learnit.g0xnlhx.mongodb.net/?retryWrites=true&w=majority`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
     console.log("MongoDb connected");
   } catch (error) {
     console.log(error.message);
