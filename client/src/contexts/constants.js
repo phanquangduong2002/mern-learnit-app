@@ -1,6 +1,6 @@
 export const apiUrl =
   process.env.NODE_ENV !== "production"
-    ? "http://localhost:5000/api"
+    ? "https://mern-learnit-app.herokuapp.com/api"
     : "https://mern-learn-it-app.herokuapp.com/api";
 
 //http://localhost:5000/api
